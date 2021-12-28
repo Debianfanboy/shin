@@ -131,7 +131,7 @@ ___
 
 2. != : Checks if the value of variable is satisfied or not. If no then it will do the <expression> if not it'll be `False` or will continue to next <condition>
 
-3. >= : Checks if the variables are equal or its greater than the other one.
+3. \>= : Checks if the variables are equal or its greater than the other one.
 
 4. <= : Checks if the variables are equal or its lesser than the other one.
 
