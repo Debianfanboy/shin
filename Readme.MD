@@ -713,14 +713,14 @@ shin > 0
 
 # To-Do 
 
-[x] Make a language
-[x] Upload on GitHub 
-[x] Make documentation
-[] Brushing the language
-[] Adding more built-in functions
-[] Make a website
-[] Make a support server
-[] Make a package manager(maybe not)
+- [x] Make a language
+- [x] Upload on GitHub 
+- [x] Make documentation
+- [] Brushing the language
+- [] Adding more built-in functions
+- [] Make a website
+- [] Make a support server
+- [] Make a package manager(maybe not)
 
 
 
