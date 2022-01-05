@@ -100,7 +100,7 @@ You can run single line code in shell mode too.
 
 ## Comments
 
-```shin
+```basic
 # This is a comment.
 # It's simlar to python 
 ```
@@ -109,7 +109,7 @@ You can run single line code in shell mode too.
 
 ## Printing
 
-```shin
+```basic
 PRINT("Hello World!")
 
 PRINT("Its similar to python but just a capitalised version.")
@@ -124,7 +124,7 @@ PRINT(2+3)
 
 ## Variables
 
-```shin
+```basic
 VAR myVariable = "Hello World"
 VAR myInteger = 0123
 VAR myBool = TRUE # It'll take TRUE as 1
@@ -134,7 +134,7 @@ For making or setting a value to a variable you've to use the `VAR` keyword.
 
 The data is mutuable also i.e you can change the value of Variables anytime.
 
-```shin
+```basic
 shin > VAR Str = "Hey"
 shin > Str
 shin > Hey
@@ -160,13 +160,13 @@ String is a “string of characters” or in programming terms, an array of char
 Supported:
 
 1. Quotes -> \"
-2. Backlash -> \\\
+2. Backlash -> \\
 3. New line -> \n 
 
 ```shin 
 "Text with \"quotes\""
 "Text with backslash \\"
-"Text \n new \lin"
+"Text \n new \line"
 ```
 
 
@@ -222,7 +222,7 @@ FUN <func_name>(arguments) -> statement(s)
 
 *Traditional functions*
 
-```shin
+```basic
 FUN function_name(arguments)
     statement(s)
 END # For ending the function 
@@ -230,7 +230,7 @@ END # For ending the function
 
 An example of using functions:
 
-```shin
+```basic
 FUN myFunc(name)
     VAR new_name = "Mr./Ms./Mrs." + name
     RETURN new_name
@@ -253,7 +253,7 @@ FUN(params) -> <expression>
 
 **For example**
 
-```shin 
+```basic
 VAR func_name = FUN(a) -> a + 6 
 func_name(3)
 
@@ -266,7 +266,7 @@ func_name(3)
 
 For example
 
-```shin 
+```basic
 FUN oop(str) -> str + "oop"
 VAR myFunc = oop
 myFunc("P")
@@ -284,7 +284,7 @@ ___
 
 ### IF statement
 
-```shin
+```basic
 IF <condition> THEN <expression>
 ```
 
@@ -292,14 +292,14 @@ __For example:__
 
 Below is the program that checks if the number is 69.
 
-```shin
+```basic
 VAR num = 69
 IF NUM == 69 THEN PRINT("yes")
 ```
 
 ### IF/ELSE statement
 
-```shin
+```basic
 IF <condition> THEN <expression> ELSE <expression>
 ```
 
@@ -307,7 +307,7 @@ _For example:_
 
 Below is a program that checks if a number is 2 or not.
 
-```shin
+```basic
 VAR num = 2
 IF NUM == THEN PRINT("Yes it's 2") ELSE PRINT("No it's not 2")
 VAR num1 = 3 
@@ -323,7 +323,7 @@ No it's not 2
 
 ### IF/ELIF/ELSE statement
 
-```
+```basic
 IF <condition> THEN <expression> ELIF <condition> THEN <expression> ELSE <expression>
 ```
 
@@ -342,7 +342,7 @@ WHILE <condition> THEN <expression>
 
 _Traditional WHILE statement_
 
-```shin
+```basic
 WHILE <condition> THEN
     <statement>
 END 
@@ -350,7 +350,7 @@ END
 
 _For example:_
 
-```shin
+```basic
 WHILE TRUE THEN
     PRINT("Yes")
 END
@@ -361,13 +361,13 @@ END
 
 _Short Hand FOR statement_
 
-```shin
+```basic
 FOR <var_name> = <start_value> TO <end_value> THEN <expression>
 ```
 
 __For example:__
 
-```shin
+```basic
 VAR result = 1
 FOR i = 1 TO 6 THEN VAR result = result*i
 PRINT(result)
@@ -379,7 +379,7 @@ Output: 120
 
 *Normal FOR statement*
 
-```shin
+```basic
 FOR <condition> or <increment> THEN
     <statement(s)>
 END
@@ -396,7 +396,7 @@ END
 
 __For example:__
 
-```shin
+```basic
 FOR i = 0 TO 11 STEP 2 THEN ....
 ```
 
@@ -415,13 +415,13 @@ List is the most versatile data type available in functional programming languag
 ```
 It'll create a empty list, you can assign a name to a list.
 
-```
+```basic
 VAR myList = []
 ```
 
 **Creating a list with elements**
 
-```
+```basic
 shin > VAR myList = [1,2,3]
 shin > [1,2,3]
 ```
@@ -430,7 +430,7 @@ shin > [1,2,3]
 
 Element can be added by `+` operator.
 
-```
+```basic
 shin > VAR myList = [1,2,3]
 shin > [1,2,3]
 shin > myList + 4
@@ -439,7 +439,7 @@ shin > [1,2,3,4]
 
 A list can be added as an element too.
 
-```
+```basic
 shin > VAR myList = [1,2,3]
 shin > [1,2,3]
 shin > VAR newList = [4,5,6]
@@ -450,7 +450,7 @@ shin > [1,2,3,[4,5,6]]
 
 Two lists can be combined by `*` operator.
 
-```
+```basic
 shin > VAR myList = [1,2,3]
 shin > [1,2,3]
 shin > VAR newList = [4,5,6]
@@ -467,7 +467,7 @@ Elements can be removed by `<list_name> - <index>`.
 Index number starts from 0.
 Negative index number starts from -1.
 
-```
+```basic
 shin > VAR myList = [1,2,3,4]
 shin > [1,2,3,4]
 shin > myList - 0
@@ -486,7 +486,7 @@ Elements can be printed by their index number.
 
 `<list_name>/index`
 
-```
+```basic
 shin > VAR myList = [1,2,3,4,5,6]
 shin > [1,2,3,4,5,6]
 shin > myList/0 
@@ -501,14 +501,14 @@ shin > 5
 
 It'll add elements in a pre-defined list.
 
-```shin
+```basic
 shin > VAR <list_name> = []
 shin > APPEND(<list_name, <element>)
 ```
 
 For example: 
 
-```
+```basic
 shin > VAR myList = [1,2,3]
 shin > [1,2,3]
 shin > APPEND(myList, 4)
@@ -517,7 +517,7 @@ shin > [1,2,3,4]
 
 You can add lists as an element too.
 
-```
+```basic
 shin > VAR myList = [1,2,3]
 shin > [1,2,3]
 shin > APPEND(myList, [4,5,6])
@@ -528,13 +528,13 @@ shin > [1,2,3,[4,5,6]]
 
 It removes an element from a list by it's index number.
 
-```
+```basic
 shin > VAR <list_name> = []
 shin > POP(<list_name>, <index>)
 ```
 
 For example: 
-```
+```basic
 shin > VAR list = [1,2,3,4]
 shin > POP(list, 3)
 shin > list
@@ -550,7 +550,7 @@ In shin lang, EXTEND is the operation for concatenating linked lists.
 
 Basically elements of 2nd list is joint in 1st list
 
-```
+```basic
 shin > VAR <list1> = []
 shin > VAR <list2> = []
 shin > EXTEND(<list1>, <list2>)
@@ -558,7 +558,7 @@ shin > EXTEND(<list1>, <list2>)
 
 For example:
 
-```
+```basic
 shin > VAR list1 = [2,4,89]
 shin > VAR list2 = [23,78,99]
 shin > EXTEND(list1, list2)
@@ -571,14 +571,14 @@ shin > [2,4,89,23,78]
 It prints the length of a list.
 
 Usage: 
-```
+```basic
 shin > VAR <list_name> = []
 shin > LEN(<list_name>)
 ```
 
 For example: 
 
-```
+```basic
 shin > VAR myList = [1,2,3,3,5]
 shin > LEN(myList)
 shin > 5
@@ -605,13 +605,13 @@ An input/output statement or I/O statement is a portion of a program that instru
 
 > It only supports Strings, For integer see INPUT_INT
 
-```
+```basic
 shin > VAR <var_name> = INPUT()
 ```
 
 The above block of code will assign a value to the variable that is entered by user.
 
-```
+```basic
 shin > VAR name = INPUT()
 John Doe
 shin > "John Doe"
@@ -621,13 +621,13 @@ shin > "John Doe"
 
 It's basically the same keyword as above but it's for integers.
 
-```
+```basic
 shin > VAR <var_name> = INPUT_INT()
 ```
 
 The above block of code will assign an integer to the variable that is entered by user.
 
-```
+```basic
 shin > VAR myAge = INPUT_INT()
 69
 shin > 69
@@ -635,7 +635,7 @@ shin > 69
 
 Erorr if the taken input isn't an integer.
 
-```
+```basic
 shin > VAR <var_name> = INPUT_INT()
 Bruh
 "Bruh" must be an integer, Try again!
@@ -647,7 +647,7 @@ shin > 69
 
 It'll clear the screen
 
-```
+```basic
 shin > CLS()
 shin >CLEAR()
 ```
@@ -656,7 +656,7 @@ shin >CLEAR()
 
 It'll check if the given data is an integer or not.
 
-```
+```basic
 shin > IS_NUM(69)
 shin > 1 
 shin > IS_NUM("String")
@@ -671,7 +671,7 @@ As specified earlier, 1 is TRUE and 0 is FALSE.
 
 It'll check if the given data is a string or not.
 
-```
+```basic
 shin > IS_STR("HEY")
 shin > 1 
 shin > IS_STR(69) 
@@ -684,7 +684,7 @@ shin > 0
 
 It'll check if the given data is a list or not.
 
-```
+```basic
 shin > IS_LIST([])
 shin > 1 
 shin > VAR myList = [1,2,3]
@@ -699,7 +699,7 @@ shin > 0
 
 It'll check if the given data is a function or not, it works on built in function and defined function both.
 
-```
+```basic
 shin > IS_FUN(PRINT)
 shin > 1 
 shin > FUN oop() -> PRINT("oop")
