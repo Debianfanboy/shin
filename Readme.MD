@@ -44,7 +44,7 @@ shin > RUN("example.shin")
 ```
 
 *The example code:*
-```
+```basic
 # This is a comment :)
 
 FUN oopify(prefix) -> prefix + "oop"
