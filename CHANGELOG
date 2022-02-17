@@ -1,0 +1,21 @@
+Version 0.1
+
+- Initial release
+
+Version 0.2 
+
+- HUGE UPDATE
+
+1. The language is purely lower caps now.
+
+
+2. Updated shell.
+	- Colorised shell.
+	- Overall improvement.
+
+3. Changed some keywords.
+	- For assigning a value to a variable we used to use `VAR` in v0.1 but now it's replaced by `let`.
+	- For defiining function we used to use `FUN` in v0.2 but now it's replaced by `func`.
+
+4. Fixed some bugs.
+
