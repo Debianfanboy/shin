@@ -9,38 +9,39 @@
 ```bash
 git clone https://github.com/Sarthak2143/shin
 cd shin/
-python3 shell.py 
+python3 shell.py
 ```
 
 ## Initialising
   You've shin shell already by using above commands. Now you have shell mode so you can do arithmetic calculations in the shell itself.
-  
-**For example: **
+
+**For example:**
 
 ```shin
-shin > 2 + 2 
-Output: 4 
+shin >>> 2 + 2
+Output: 4
 
-shin > 75 - 6
+shin >>> 75 - 6
 Output: 69
 
-shin > 33*3 
+shin >>> 33*3
 Output: 99
 
-shin > 100/10 
+shin >>> 100/10
 Output: 10
 
-shin > 2^3
+shin >>> 2^3
 Output: 8
 ```
+
+> `**` is replaced by `^` for power.
 
   Now, for script you can use the extension `.shin` for saving files and run with below command.
 
 ```
-shin > RUN("file_name.shin")
-# Run the example file 
-shin > RUN("example.shin")
-
+shin >>> run("<file_name>.shin")
+# Run the example file
+shin >>> run("example.shin")
 ```
 
 *The example code:*
@@ -50,44 +51,44 @@ shin > RUN("example.shin")
 FUN oopify(prefix) -> prefix + "oop"
 
 FUN join(elements, separator)
-	VAR result = ""
-	VAR len = LEN(elements)
+        VAR result = ""
+        VAR len = LEN(elements)
 
-	FOR i = 0 TO len THEN
-		VAR result = result + elements/i
-		IF i != len - 1 THEN VAR result = result + separator
-	END
+        FOR i = 0 TO len THEN
+                VAR result = result + elements/i
+                IF i != len - 1 THEN VAR result = result + separator
+        END
 
-	RETURN result
+        RETURN result
 END
 
 FUN map(elements, func)
-	VAR new_elements = []
+        VAR new_elements = []
 
-	FOR i = 0 TO LEN(elements) THEN
-		APPEND(new_elements, func(elements/i))
-	END
+        FOR i = 0 TO LEN(elements) THEN
+                APPEND(new_elements, func(elements/i))
+        END
 
-	RETURN new_elements
+        RETURN new_elements
 END
 
 PRINT("Greetings universe!")
 
 FOR i = 0 TO 5 THEN
-	PRINT(join(map(["l", "sp"], oopify), ", "))
+        PRINT(join(map(["l", "sp"], oopify), ", "))
 END
 
 
 ```
   Alright, now you've the shin lang installed. Now its time for using it.
-  
+
 ___
 
 # Documentation (still working)
 
 > Below is the official documentation of the language, feel free to check it :D
 
-**Note :**
+**Note:**
 You can run single line code in shell mode too.
 
 ## Arithmetic Operators:
@@ -102,45 +103,48 @@ You can run single line code in shell mode too.
 
 ```basic
 # This is a comment.
-# It's simlar to python 
+# It's simlar to python
 ```
 
-> Shin lang only supports Single line comments.
+> Shin lang only supports single line comments as for now.
 
 ## Printing
 
 ```basic
-PRINT("Hello World!")
+print("Hello World!")
 
-PRINT("Its similar to python but just a capitalised version.")
+print("Its similar to python but just a capitalised version.")
 
-VAR myVar = "Variable"
+let myVar = "Variable"
 
-PRINT(myVar)
+print(myVar)
 
-PRINT(2+3)
+print(2+3)
 
 ```
+
+> Only double quotes e.g `""` are supported.
+
 
 ## Variables
 
 ```basic
-VAR myVariable = "Hello World"
-VAR myInteger = 0123
-VAR myBool = TRUE # It'll take TRUE as 1
+let myVariable = "Hello World"
+let myInteger = 0123
+let myBool = TRUE # It'll take TRUE as 1
 ```
 
-For making or setting a value to a variable you've to use the `VAR` keyword.
+For making or setting a value to a variable you've to use the `let` keyword.
 
-The data is mutuable also i.e you can change the value of Variables anytime.
+The data is mutuable also i.e you can change the value of variables anytime.
 
 ```basic
-shin > VAR Str = "Hey"
-shin > Str
-shin > Hey
-shin > VAR Str = "It's mutuable"
-shin > Str
-shin > It's mutuable
+shin >>> let Str = "Data"
+shin >>> Str
+shin >>> "Data"
+shin >>> let Str = "It's mutuable"
+shin >>> Str
+shin >>> "It's mutuable"
 ```
 
 Suported Data types -> Strings, Integers and Boolean.
@@ -159,14 +163,14 @@ String is a “string of characters” or in programming terms, an array of char
 
 Supported:
 
-1. Quotes -> \"
-2. Backlash -> \\
-3. New line -> \n 
+1. Quotes -> `\"`
+2. Backlash -> `\\`
+3. New line -> `\n`
 
-```shin 
+```shin
 "Text with \"quotes\""
 "Text with backslash \\"
-"Text \n new \line"
+"Text \n in new \line."
 ```
 
 
@@ -185,9 +189,9 @@ In computer science, a boolean or bool is a data type with two possible values: 
 In shin, `TRUE` is simplified as `1` and `FALSE` is simplified as `0`, That's how it's in low level languages.
 
 ___
-## Comparisons and Logical operator 
+## Comparisons and Logical operator
 
-### Comparison operator: 
+### Comparison operator:
 
 1. `==` : Checks if the value of variable is satisfied or not. If yes then it will do the <expression> if not it'll be `False` or will continue to next <condition>
 
@@ -215,46 +219,47 @@ _Types of functions supported:_
 **2. Traditional functions**
 **3. Anonymous functions**
 
-*Short hand functions* 
+*Short hand functions*
 ```shin
-FUN <func_name>(arguments) -> statement(s)
+func <func_name>(arguments) -> statement(s)
 ```
 
 *Traditional functions*
 
 ```basic
-FUN function_name(arguments)
+func function_name(arguments)
     statement(s)
-END # For ending the function 
+end # For ending the function
 ```
 
 An example of using functions:
 
 ```basic
-FUN myFunc(name)
-    VAR new_name = "Mr./Ms./Mrs." + name
-    RETURN new_name
+func myFunc(name)
+    let new_name = "Mr./Ms./Mrs." + name
+    return new_name
 myFunc(John)
 ```
 
-The `RETURN` keyword is used for returning the value of a variable.
+The `return` keyword is used for returning the value of a variable.
 
 ```
 Output: Mr./Ms./Mrs. John
 ```
 
 *Anonymous functions*
->  An anonymous function is a function that is not stored in a program file, but is associated with a variable whose data type is function_handle. Anonymous functions can accept multiple inputs and return one output.
+
+An anonymous function is a function that is not stored in a program file, but is associated with a variable whose data type is function_handle. Anonymous functions can accept multiple inputs and return one output.
 
 Syntax:
 ```shin
-FUN(params) -> <expression>
+func(params) -> <expression>
 ```
 
-**For example**
+**For example:**
 
 ```basic
-VAR func_name = FUN(a) -> a + 6 
+let func_name = func(a) -> a + 6
 func_name(3)
 
 ```
@@ -264,16 +269,16 @@ func_name(3)
 ### Note
 > You can assign a function to variable too.
 
-For example
+**For example**
 
 ```basic
-FUN oop(str) -> str + "oop"
-VAR myFunc = oop
+func oop(str) -> str + "oop"
+var myFunc = oop
 myFunc("P")
 ```
 
 ```
-Output: Poop 
+Output: "Poop"
 ```
 
 
@@ -284,47 +289,46 @@ ___
 
 ### IF statement
 
-```basic
-IF <condition> THEN <expression>
+```py
+if<condition> then <expression>
 ```
 
-__For example:__
+**For example:**
 
 Below is the program that checks if the number is 69.
 
-```basic
-VAR num = 69
-IF NUM == 69 THEN PRINT("yes")
+```py
+let num = 69
+if num == 69 then print("yes")
 ```
 
 ### IF/ELSE statement
 
-```basic
-IF <condition> THEN <expression> ELSE <expression>
+```py
+if <condition> then <expression> else <expression>
 ```
 
-_For example:_
+**For example:**
 
 Below is a program that checks if a number is 2 or not.
 
-```basic
-VAR num = 2
-IF NUM == THEN PRINT("Yes it's 2") ELSE PRINT("No it's not 2")
-VAR num1 = 3 
-IF NUM == THEN PRINT("Yes it's 2") ELSE PRINT("No it's not 2")
+```py
+let num = 2
+if num == then print("Yes it's 2") else print("No it's not 2")
+let num1 = 3
+if num1 == 2 then print("Yes it's 2") else print("No it's not 2")
 ```
 
 ```
-Output: 
-Yes it's two 
-
-No it's not 2 
+Output:
+"Yes it's two"
+"No it's not 2"
 ```
 
-### IF/ELIF/ELSE statement
+### if/elif/else statement
 
-```basic
-IF <condition> THEN <expression> ELIF <condition> THEN <expression> ELSE <expression>
+```py
+if <condition> then <expression> elif <condition> then <expression> else <expression>
 ```
 
 ## While statement
@@ -336,73 +340,73 @@ _Types of WHILE statement:_
 
 _Short Hand WHILE statement_
 
-```shin
-WHILE <condition> THEN <expression>
+```py
+while <condition> then <expression>
 ```
 
 _Traditional WHILE statement_
 
-```basic
-WHILE <condition> THEN
+```py
+while <condition> then
     <statement>
-END 
+end
 ```
 
-_For example:_
+**For example:**
 
-```basic
-WHILE TRUE THEN
-    PRINT("Yes")
-END
+```py
+while 1 then
+    print("Yes")
+end
 ```
-> The above program will keep printing "Yes" because 1+1 is always equal to 2.
+The above program will keep printing "Yes" because it's **TRUE**.
 
-## FOR statement
+## for statement
 
-_Short Hand FOR statement_
+**Short Hand `for` statement**
 
-```basic
-FOR <var_name> = <start_value> TO <end_value> THEN <expression>
+```py
+for <var_name> = <start_value> to <end_value> then <expression>
 ```
 
 __For example:__
 
-```basic
-VAR result = 1
-FOR i = 1 TO 6 THEN VAR result = result*i
-PRINT(result)
+```py
+let result = 1
+for i = 1 to 6 then let result = result*i
+print(result)
 ```
 
 ```
 Output: 120
 ```
 
-*Normal FOR statement*
+**Normal `for` statement**
 
-```basic
-FOR <condition> or <increment> THEN
+```py
+for <condition> or <increment> then
     <statement(s)>
-END
+end
 ```
 
 
 ```
-<increment> = <var_name> = <start_value> TO <end_value>
+<increment> = <var_name> = <start_value> to <end_value>
 ```
 
 ### STEP in FOR statement
 
-`STEP` keyword is for changing the increment value.
+`step` keyword is for changing the increment value.
 
-__For example:__
+**For example:**
 
-```basic
-FOR i = 0 TO 11 STEP 2 THEN ....
+```py
+for i = 0 to 11 step 2 then ....
 ```
 
-> The above block of code will take numbers from 0 to 11 with a increment value of 2, so the numbers should be 0,2,4,6,8,10.
+The above block of code will take numbers from 0 to 11 with a increment value of 2, so the numbers should be 0,2,4,6,8,10.
 
-`STEP` values can be negative too i.e STEP -n 
+`step` values can be negative too i.e STEP -n
 
 ## Lists
 
@@ -416,14 +420,14 @@ List is the most versatile data type available in functional programming languag
 It'll create a empty list, you can assign a name to a list.
 
 ```basic
-VAR myList = []
+let myList = []
 ```
 
 **Creating a list with elements**
 
 ```basic
-shin > VAR myList = [1,2,3]
-shin > [1,2,3]
+shin >>> let myList = [1,2,3]
+shin >>> [1,2,3]
 ```
 
 **Adding elements in a list**
@@ -431,18 +435,18 @@ shin > [1,2,3]
 Element can be added by `+` operator.
 
 ```basic
-shin > VAR myList = [1,2,3]
-shin > [1,2,3]
-shin > myList + 4
-shin > [1,2,3,4]
+shin >>> let myList = [1,2,3]
+shin >>> [1,2,3]
+shin >>> myList + 4
+shin >>> [1,2,3,4]
 ```
 
-A list can be added as an element too.
+A list can be added as an element too aka **list concatenation.**
 
-```basic
-shin > VAR myList = [1,2,3]
-shin > [1,2,3]
-shin > VAR newList = [4,5,6]
+```py
+shin >>> let myList = [1,2,3]
+shin >>> [1,2,3]
+shin >>> let newList = [4,5,6]
 shin > [1,2,3,[4,5,6]]
 ```
 
@@ -451,12 +455,12 @@ shin > [1,2,3,[4,5,6]]
 Two lists can be combined by `*` operator.
 
 ```basic
-shin > VAR myList = [1,2,3]
-shin > [1,2,3]
-shin > VAR newList = [4,5,6]
-shin > [4,5,6]
-shin > myList * newList
-shin > [1,2,3,4,5,6]
+shin >>> let myList = [1,2,3]
+shin >>> [1,2,3]
+shin >>> let newList = [4,5,6]
+shin >>> [4,5,6]
+shin >>> myList * newList
+shin >>> [1,2,3,4,5,6]
 ```
 
 **Removing elements**
@@ -467,15 +471,15 @@ Elements can be removed by `<list_name> - <index>`.
 Index number starts from 0.
 Negative index number starts from -1.
 
-```basic
-shin > VAR myList = [1,2,3,4]
-shin > [1,2,3,4]
-shin > myList - 0
-shin > [2,3,4]
-shin > myList - 1 
-shin > [2,4]
-shin > myList - -1
-shin > [2]
+```py
+shin >>> let myList = [1,2,3,4]
+shin >>> [1,2,3,4]
+shin >>> myList - 0
+shin >>> [2,3,4]
+shin >>> myList - 1
+shin >>> [2,4]
+shin >>> myList - -1
+shin >>> [2]
 ```
 
 In the above block of code, first `1` is removed as it's index number is 0. Then, `3` is removed as it's index number is 1. Then, `4` is removed as it's index number is -1.
@@ -486,63 +490,64 @@ Elements can be printed by their index number.
 
 `<list_name>/index`
 
-```basic
-shin > VAR myList = [1,2,3,4,5,6]
-shin > [1,2,3,4,5,6]
-shin > myList/0 
-shin > 1 
-shin myList/3 
-shin > 4 
-shin > myList/-2 
-shin > 5
+```py
+shin >>> let myList = [1,2,3,4,5,6]
+shin >>> [1,2,3,4,5,6]
+shin >>> myList/0
+shin >>> 1
+shin >>>  myList/3
+shin >>> 4
+shin >>> myList/-2
+shin >>> 5
 ```
 
 ### APPEND function
 
 It'll add elements in a pre-defined list.
 
-```basic
-shin > VAR <list_name> = []
-shin > APPEND(<list_name, <element>)
+```py
+shin >>> let <list_name> = []
+shin >>> append(<list_name, <element>)
 ```
 
-For example: 
+**For example:**
 
-```basic
-shin > VAR myList = [1,2,3]
-shin > [1,2,3]
-shin > APPEND(myList, 4)
-shin > [1,2,3,4]
+```py
+shin >>> let myList = [1,2,3]
+shin >>> [1,2,3]
+shin >>> append(myList, 4)
+shin >>> [1,2,3,4]
 ```
 
 You can add lists as an element too.
 
-```basic
-shin > VAR myList = [1,2,3]
-shin > [1,2,3]
-shin > APPEND(myList, [4,5,6])
-shin > [1,2,3,[4,5,6]]
+```py
+shin >>> let myList = [1,2,3]
+shin >>> [1,2,3]
+shin >>> append(myList, [4,5,6])
+shin >>> [1,2,3,[4,5,6]]
 ```
 
-### POP function 
+### POP function
 
 It removes an element from a list by it's index number.
 
-```basic
-shin > VAR <list_name> = []
-shin > POP(<list_name>, <index>)
+```py
+shin >>> let <list_name> = []
+shin >>> pop(<list_name>, <index>)
 ```
 
-For example: 
-```basic
-shin > VAR list = [1,2,3,4]
-shin > POP(list, 3)
-shin > list
-shin > [1,2,3]
+**For example:**
+```py
+shin >>> let list = [1,2,3,4]
+shin >>> pop(list, 3)
+shin >>> list
+shin >>> [1,2,3]
 ```
 
 It removed 4 as it's index number is 3.
-> Negative indexing can be also used.
+
+Negative indexing can be also used.
 
 ### EXTEND() function
 
@@ -550,38 +555,38 @@ In shin lang, EXTEND is the operation for concatenating linked lists.
 
 Basically elements of 2nd list is joint in 1st list
 
-```basic
-shin > VAR <list1> = []
-shin > VAR <list2> = []
-shin > EXTEND(<list1>, <list2>)
+```py
+shin >>> let <list1> = []
+shin >>> let <list2> = []
+shin >>> extend(<list1>, <list2>)
 ```
 
-For example:
+**For example:**
 
-```basic
-shin > VAR list1 = [2,4,89]
-shin > VAR list2 = [23,78,99]
-shin > EXTEND(list1, list2)
-shin > list1
-shin > [2,4,89,23,78]
+```py
+shin >>> let list1 = [2,4,89]
+shin >>> let list2 = [23,78,99]
+shin >>> extend(list1, list2)
+shin >>> list1
+shin >>> [2,4,89,23,78]
 ```
 
-### LEN() function 
+### LEN() function
 
 It prints the length of a list.
 
-Usage: 
-```basic
-shin > VAR <list_name> = []
-shin > LEN(<list_name>)
+Usage:
+```py
+shin >>> let <list_name> = []
+shin >>> let(<list_name>)
 ```
 
-For example: 
+**For example:**
 
-```basic
-shin > VAR myList = [1,2,3,3,5]
-shin > LEN(myList)
-shin > 5
+```py
+shin >>> let myList = [1,2,3,3,5]
+shin >>> len(myList)
+shin >>> 5
 ```
 
 ___
@@ -590,138 +595,134 @@ ___
 
 A function that is built into an application and can be accessed by end-users. For example, most spreadsheet applications support a built-in SUM function that adds up all cells in a row or column.
 
-### MATH_PI
+### math_pi
 
 Prints the value of Pi/π.
 
 ```
-shin > MATH_PI
-shin > 3.141592653589793
+shin >>> math_pi
+shin >>> 3.141592653589793
 ```
 
-### INPUT statement
+### input statement
 
 An input/output statement or I/O statement is a portion of a program that instructs a computer how to read and process information. It pertains to gather information from an input device, or sending information to an output device.
 
 > It only supports Strings, For integer see INPUT_INT
 
 ```basic
-shin > VAR <var_name> = INPUT()
+shin >>> let <var_name> = input()
 ```
 
 The above block of code will assign a value to the variable that is entered by user.
 
 ```basic
-shin > VAR name = INPUT()
+shin >>> let name = input()
 John Doe
-shin > "John Doe"
+shin >>> "John Doe"
 ```
 
-### INPUT_INT statement
+### input_int statement
 
 It's basically the same keyword as above but it's for integers.
 
 ```basic
-shin > VAR <var_name> = INPUT_INT()
+shin >>> let <var_name> = input_int()
 ```
 
 The above block of code will assign an integer to the variable that is entered by user.
 
 ```basic
-shin > VAR myAge = INPUT_INT()
+shin >>> var myAge = input_int()
 69
-shin > 69
+shin >>> 69
 ```
 
 Erorr if the taken input isn't an integer.
 
 ```basic
-shin > VAR <var_name> = INPUT_INT()
-Bruh
-"Bruh" must be an integer, Try again!
+shin >>> let <var_name> = input_int()
+Text
+"Text" must be an integer, Try again!
 69
-shin > 69 
+shin >>> 69
 ```
 
-### CLEAR() and CLS()
+### clear() and cls()
 
-It'll clear the screen
+It'll clear the screen.
 
 ```basic
-shin > CLS()
-shin >CLEAR()
+shin >>> cls() #for windows nt
+shin >>> clear() # for mac and linux
 ```
 
-### IS_NUM()
+### is_num()
 
 It'll check if the given data is an integer or not.
 
 ```basic
-shin > IS_NUM(69)
-shin > 1 
-shin > IS_NUM("String")
-shin > 0 
-shin > IS_NUM([])
-shin > 0 
+shin >>> is_num(69)
+shin >>> 1
+shin >>> is_num("String")
+shin >>> 0
+shin >>> is_num([])
+shin >>> 0
 ```
 
 As specified earlier, 1 is TRUE and 0 is FALSE.
 
-### IS_STR()
+### is_str()
 
 It'll check if the given data is a string or not.
 
 ```basic
-shin > IS_STR("HEY")
-shin > 1 
-shin > IS_STR(69) 
-shin > 0 
-shin > IS_STR([])
-shin > 0 
+shin >>> is_str("HEY")
+shin >>> 1
+shin >>> is_str(69)
+shin >>> 0
+shin >>> is_str([])
+shin >>> 0
 ```
 
-### IS_LIST()
+### is_list()
 
 It'll check if the given data is a list or not.
 
 ```basic
-shin > IS_LIST([])
-shin > 1 
-shin > VAR myList = [1,2,3]
-shin > [1,2,3]
-shin > IS_LIST(myList)
-shin > 1 
-shin > IS_LIST(23)
-shin > 0 
+shin >>> is_list([])
+shin >>> 1
+shin >>> let myList = [1,2,3]
+shin >>> [1,2,3]
+shin >>> is_list(myList)
+shin >>> 1
+shin >>> is_list(23)
+shin >>> 0
 ```
 
-### IS_FUN()
+### is_func()
 
 It'll check if the given data is a function or not, it works on built in function and defined function both.
 
-```basic
-shin > IS_FUN(PRINT)
-shin > 1 
-shin > FUN oop() -> PRINT("oop")
-shin > IS_FUN(oop)
-shin > 1 
-shin > IS_FUN(23)
-shin > 0
+```py
+shin >>> is_func(print)
+shin >>> 1
+shin >>> func oop() -> print("oop")
+shin >>> is_func(oop)
+shin >>> 1
+shin >>> is_func(23)
+shin >>> 0
 ```
 
-> Thanks, for coming till here. 
+> Thanks, for coming till here.
 
-# To-Do 
+# To-Do
 
 - [x] Make a language
-- [x] Upload on GitHub 
+- [x] Upload on GitHub
 - [x] Make documentation
-- [ ] Brushing the language
+- [x] Brushing the language
+- [x] Adding examples for programs
 - [ ] Adding more built-in functions
 - [ ] Make a website
-- [ ] Make a support server
 - [ ] Make a package manager(maybe not)
-
-
-
-
