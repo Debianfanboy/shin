@@ -143,6 +143,20 @@ KEYWORDS = [
   'break',
 ]
 
+OPERATORS = {
+  ';': TT_NEWLINE,
+  '\n': TT_NEWLINE,
+  '+': TT_PLUS,
+  '*': TT_MUL,
+  '/': TT_DIV,
+  '^': TT_POW,
+  '(': TT_LPAREN,
+  ')': TT_RPAREN,
+  '[': TT_LSQUARE,
+  ']': TT_RSQUARE,
+  ',': TT_COMMA
+}
+
 class Token:
   def __init__(self, type_, value=None, pos_start=None, pos_end=None):
     self.type = type_
@@ -187,54 +201,27 @@ class Lexer:
         self.advance()
       elif self.current_char == '#':
         self.skip_comment()
-      elif self.current_char in ';\n':
-        tokens.append(Token(TT_NEWLINE, pos_start=self.pos))
-        self.advance()
       elif self.current_char in DIGITS:
         tokens.append(self.make_number())
       elif self.current_char in LETTERS:
         tokens.append(self.make_identifier())
+      elif self.current_char in OPERATORS:
+        tokens.append(Token(OPERATORS[self.current_char], pos_start=self.pos))
+        self.advance()
       elif self.current_char == '"':
         tokens.append(self.make_string())
-      elif self.current_char == '+':
-        tokens.append(Token(TT_PLUS, pos_start=self.pos))
-        self.advance()
       elif self.current_char == '-':
         tokens.append(self.make_minus_or_arrow())
-      elif self.current_char == '*':
-        tokens.append(Token(TT_MUL, pos_start=self.pos))
-        self.advance()
-      elif self.current_char == '/':
-        tokens.append(Token(TT_DIV, pos_start=self.pos))
-        self.advance()
-      elif self.current_char == '^':
-        tokens.append(Token(TT_POW, pos_start=self.pos))
-        self.advance()
-      elif self.current_char == '(':
-        tokens.append(Token(TT_LPAREN, pos_start=self.pos))
-        self.advance()
-      elif self.current_char == ')':
-        tokens.append(Token(TT_RPAREN, pos_start=self.pos))
-        self.advance()
-      elif self.current_char == '[':
-        tokens.append(Token(TT_LSQUARE, pos_start=self.pos))
-        self.advance()
-      elif self.current_char == ']':
-        tokens.append(Token(TT_RSQUARE, pos_start=self.pos))
-        self.advance()
-      elif self.current_char == '!':
-        token, error = self.make_not_equals()
-        if error: return [], error
-        tokens.append(token)
       elif self.current_char == '=':
         tokens.append(self.make_equals())
       elif self.current_char == '<':
         tokens.append(self.make_less_than())
       elif self.current_char == '>':
         tokens.append(self.make_greater_than())
-      elif self.current_char == ',':
-        tokens.append(Token(TT_COMMA, pos_start=self.pos))
-        self.advance()
+      elif self.current_char == '!':
+        token, error = self.make_not_equals()
+        if error: return [], error
+        tokens.append(token)
       else:
         pos_start = self.pos.copy()
         char = self.current_char
