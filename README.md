@@ -1,5 +1,5 @@
 # Shin Language
-> A basic programming language written in python and inspired by python and BASIC.
+> A basic toy programming language written in python and inspired by python and BASIC.
 
 ## Downloading
 
@@ -8,8 +8,7 @@
 
 ```bash
 git clone https://github.com/Sarthak2143/shin
-cd shin/
-python3 shell.py
+python3 shin
 ```
 
 ## Initialising
@@ -17,7 +16,7 @@ python3 shell.py
 
 **For example:**
 
-```shin
+```py
 shin >>> 2 + 2
 Output: 4
 
@@ -40,53 +39,13 @@ Output: 8
 
 ```
 shin >>> run("<file_name>.shin")
-# Run the example file
-shin >>> run("example.shin")
 ```
 
-*The example code:*
-```basic
-# This is a comment :)
+__
 
-FUN oopify(prefix) -> prefix + "oop"
+# Documentation
 
-FUN join(elements, separator)
-        VAR result = ""
-        VAR len = LEN(elements)
-
-        FOR i = 0 TO len THEN
-                VAR result = result + elements/i
-                IF i != len - 1 THEN VAR result = result + separator
-        END
-
-        RETURN result
-END
-
-FUN map(elements, func)
-        VAR new_elements = []
-
-        FOR i = 0 TO LEN(elements) THEN
-                APPEND(new_elements, func(elements/i))
-        END
-
-        RETURN new_elements
-END
-
-PRINT("Greetings universe!")
-
-FOR i = 0 TO 5 THEN
-        PRINT(join(map(["l", "sp"], oopify), ", "))
-END
-
-
-```
-  Alright, now you've the shin lang installed. Now its time for using it.
-
-___
-
-# Documentation (still working)
-
-> Below is the official documentation of the language, feel free to check it :D
+> Below is the official documentation of the language.
 
 **Note:**
 You can run single line code in shell mode too.
@@ -101,7 +60,7 @@ You can run single line code in shell mode too.
 
 ## Comments
 
-```basic
+```py
 # This is a comment.
 # It's simlar to python
 ```
@@ -110,7 +69,7 @@ You can run single line code in shell mode too.
 
 ## Printing
 
-```basic
+```py
 print("Hello World!")
 
 print("Its similar to python but just a capitalised version.")
@@ -128,7 +87,7 @@ print(2+3)
 
 ## Variables
 
-```basic
+```py
 let myVariable = "Hello World"
 let myInteger = 0123
 let myBool = TRUE # It'll take TRUE as 1
@@ -138,7 +97,7 @@ For making or setting a value to a variable you've to use the `let` keyword.
 
 The data is mutuable also i.e you can change the value of variables anytime.
 
-```basic
+```py
 shin >>> let Str = "Data"
 shin >>> Str
 shin >>> "Data"
@@ -226,7 +185,7 @@ func <func_name>(arguments) -> statement(s)
 
 *Traditional functions*
 
-```basic
+```py
 func function_name(arguments)
     statement(s)
 end # For ending the function
@@ -234,7 +193,7 @@ end # For ending the function
 
 An example of using functions:
 
-```basic
+```py
 func myFunc(name)
     let new_name = "Mr./Ms./Mrs." + name
     return new_name
@@ -258,7 +217,7 @@ func(params) -> <expression>
 
 **For example:**
 
-```basic
+```py
 let func_name = func(a) -> a + 6
 func_name(3)
 
@@ -271,7 +230,7 @@ func_name(3)
 
 **For example**
 
-```basic
+```py
 func oop(str) -> str + "oop"
 var myFunc = oop
 myFunc("P")
@@ -414,18 +373,18 @@ List is the most versatile data type available in functional programming languag
 
 **Creating a empty list**
 
-```
+```py
 []
 ```
 It'll create a empty list, you can assign a name to a list.
 
-```basic
+```py
 let myList = []
 ```
 
 **Creating a list with elements**
 
-```basic
+```py
 shin >>> let myList = [1,2,3]
 shin >>> [1,2,3]
 ```
@@ -434,7 +393,7 @@ shin >>> [1,2,3]
 
 Element can be added by `+` operator.
 
-```basic
+```py
 shin >>> let myList = [1,2,3]
 shin >>> [1,2,3]
 shin >>> myList + 4
@@ -454,7 +413,7 @@ shin > [1,2,3,[4,5,6]]
 
 Two lists can be combined by `*` operator.
 
-```basic
+```py
 shin >>> let myList = [1,2,3]
 shin >>> [1,2,3]
 shin >>> let newList = [4,5,6]
@@ -589,7 +548,7 @@ shin >>> len(myList)
 shin >>> 5
 ```
 
-___
+__
 
 ## Built in functions
 
@@ -599,7 +558,7 @@ A function that is built into an application and can be accessed by end-users. F
 
 Prints the value of Pi/π.
 
-```
+```py
 shin >>> math_pi
 shin >>> 3.141592653589793
 ```
@@ -610,13 +569,13 @@ An input/output statement or I/O statement is a portion of a program that instru
 
 > It only supports Strings, For integer see INPUT_INT
 
-```basic
+```py
 shin >>> let <var_name> = input()
 ```
 
 The above block of code will assign a value to the variable that is entered by user.
 
-```basic
+```py
 shin >>> let name = input()
 John Doe
 shin >>> "John Doe"
@@ -624,15 +583,15 @@ shin >>> "John Doe"
 
 ### input_int statement
 
-It's basically the same keyword as above but it's for integers.
+It's pyally the same keyword as above but it's for integers.
 
-```basic
+```py
 shin >>> let <var_name> = input_int()
 ```
 
 The above block of code will assign an integer to the variable that is entered by user.
 
-```basic
+```py
 shin >>> var myAge = input_int()
 69
 shin >>> 69
@@ -640,7 +599,7 @@ shin >>> 69
 
 Erorr if the taken input isn't an integer.
 
-```basic
+```py
 shin >>> let <var_name> = input_int()
 Text
 "Text" must be an integer, Try again!
@@ -652,7 +611,7 @@ shin >>> 69
 
 It'll clear the screen.
 
-```basic
+```py
 shin >>> cls() #for windows nt
 shin >>> clear() # for mac and linux
 ```
@@ -661,7 +620,7 @@ shin >>> clear() # for mac and linux
 
 It'll check if the given data is an integer or not.
 
-```basic
+```py
 shin >>> is_num(69)
 shin >>> 1
 shin >>> is_num("String")
@@ -676,7 +635,7 @@ As specified earlier, 1 is TRUE and 0 is FALSE.
 
 It'll check if the given data is a string or not.
 
-```basic
+```py
 shin >>> is_str("HEY")
 shin >>> 1
 shin >>> is_str(69)
@@ -689,7 +648,7 @@ shin >>> 0
 
 It'll check if the given data is a list or not.
 
-```basic
+```py
 shin >>> is_list([])
 shin >>> 1
 shin >>> let myList = [1,2,3]
