@@ -1,6 +1,4 @@
 import shin
-import time
-import sys
 from colorama import Fore, Style
 
 print("Shin Lang v0.2 | Author: Shinero")
@@ -22,4 +20,3 @@ while True:
 
         else:
             print(repr(result))
-
