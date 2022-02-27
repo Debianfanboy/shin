@@ -2,20 +2,40 @@ Version 0.1
 
 - Initial release
 
-Version 0.2 
+Version 0.2
 
-- HUGE UPDATE
-
+- HUGE UPDATE                                           
 1. The language is purely lower caps now.
 
 
 2. Updated shell.
-	- Colorised shell.
-	- Overall improvement.
+        - Colorised shell.
+        - Overall improvement.
 
 3. Changed some keywords.
-	- For assigning a value to a variable we used to use `VAR` in v0.1 but now it's replaced by `let`.
-	- For defiining function we used to use `FUN` in v0.2 but now it's replaced by `func`.
+        - For assigning a value to a variable we used to use `VAR` in v0.1 but now it's replaced by `let`.
+        - For defiining function we used to use `FUN` in v0.2 but now it's replaced by `func`.
 
 4. Fixed some bugs.
 
+Version 0.3
+
+- Removed repetetive elifs in shin.py by TomEpilson
+        Pull request: shin #5
+        Commit hash: 98f06c74b3eff18c84a22a0d5d26702f05e6cd81
+
+Version 0.4
+
+1. Improvement in installing.
+        - Added .gitignore by was07
+        - Renamed shell.py to __main.py__ by was07
+        Pull request: shin #6
+        Commit hash: d4c20cff3df28b25c3614047ebb47d3f10f8b21d
+
+2. Improvement in shell.
+        - Removed KeyboardInterrupt error.
+        - Added colors in shell.
+
+3. Documentation bugs fixes
+        - Removed example code.
+        - Fixed some typos.
