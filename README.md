@@ -1,4 +1,5 @@
 # Shin Language
+
 > A basic toy programming language written in python and inspired by python and BASIC.
 
 ## Downloading
@@ -41,7 +42,7 @@ Output: 8
 shin >>> run("<file_name>.shin")
 ```
 
-__
+___
 
 # Documentation
 
@@ -147,7 +148,7 @@ In computer science, a boolean or bool is a data type with two possible values: 
 
 In shin, `TRUE` is simplified as `1` and `FALSE` is simplified as `0`, That's how it's in low level languages.
 
-___
+____
 ## Comparisons and Logical operator
 
 ### Comparison operator:
