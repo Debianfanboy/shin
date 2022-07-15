@@ -1,3 +1,8 @@
+# Coding: UTF-8
+# Author: Sarthak2143
+# Source Code: github.com/Sarthak2143/shin
+
+
 #######################################
 # IMPORTS
 #######################################
