@@ -11,7 +11,8 @@
 
 ```bash
 git clone https://github.com/Sarthak2143/shin
-python3 shin
+cd shin/
+python3 -m shin
 ```
 
 ## Initialising
@@ -44,7 +45,7 @@ Output: 8
 shin >>> run("<file_name>.shin")
 ```
 
-___
+---
 
 # Documentation
 
@@ -150,7 +151,8 @@ In computer science, a boolean or bool is a data type with two possible values: 
 
 In shin, `TRUE` is simplified as `1` and `FALSE` is simplified as `0`, That's how it's in low level languages.
 
-____
+---
+
 ## Comparisons and Logical operator
 
 ### Comparison operator:
@@ -171,7 +173,7 @@ ____
 
 3. `not` : It'll print `True` incase of False condition and `False` incase of True condition.
 
-___
+---
 ## Functions
 
 > Functions are "self contained" modules of code that accomplish a specific task. Functions usually "take in" data, process it, and "return" a result. Once a function is written, it can be used over and over and over again.
@@ -244,7 +246,7 @@ Output: "Poop"
 ```
 
 
-___
+---
 ## Conditions
 
 **Conditions supoorted: ** -> IF, ELIF(ELSE IF) AND ELSE
