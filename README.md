@@ -2,9 +2,11 @@
 
 > A basic toy programming language written in python and inspired by python and BASIC.
 
-## Downloading
+[![forthebadgemade-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 
-### Pre requisite:
+## Installing
+
+### Pre-requisites:
   You need `python3` and `git` installed on your system.
 
 ```bash
@@ -66,7 +68,7 @@ You can run single line code in shell mode too.
 # It's simlar to python
 ```
 
-> Shin lang only supports single line comments as for now.
+> Shin lang only supports **single line comments** as for now.
 
 ## Printing
 
