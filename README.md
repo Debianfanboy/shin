@@ -69,7 +69,7 @@ You can run single line code in shell mode too.
 # It's simlar to python
 ```
 
-> Shin lang only supports **single line comments** as for now.
+> Shin lang only supports **single line comments** as of now.
 
 ## Printing
 
