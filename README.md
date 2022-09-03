@@ -114,7 +114,7 @@ Suported Data types -> Strings, Integers and Boolean.
 
 ## Data types
 
-Shin lang supports Strings, Integers, Flloats and Boolean as data.
+Shin lang supports Strings, Integers, Floats and Boolean as data.
 
 ### Strings
 
