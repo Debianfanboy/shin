@@ -16,7 +16,7 @@ python3 -m shin
 ```
 
 ## Initialising
-  You've shin shell already by using above commands. Now you have shell mode so you can do arithmetic calculations in the shell itself.
+  You've installed shin shell already by using the commands above. Now you have shell mode so you can do arithmetic calculations in the shell itself.
 
 **For example:**
 
