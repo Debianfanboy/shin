@@ -16,7 +16,7 @@ python3 -m shin
 ```
 
 ## Initialising
-  You've shin shell already by using above commands. Now you have shell mode so you can do arithmetic calculations in the shell itself.
+  You've installed shin shell already by using the commands above. Now you have shell mode so you can do arithmetic calculations in the shell itself.
 
 **For example:**
 
@@ -69,7 +69,7 @@ You can run single line code in shell mode too.
 # It's simlar to python
 ```
 
-> Shin lang only supports **single line comments** as for now.
+> Shin lang only supports **single line comments** as of now.
 
 ## Printing
 
@@ -118,7 +118,7 @@ Shin lang supports Strings, Integers, Floats and Boolean as data.
 
 ### Strings
 
-String is a “string of characters” or in programming terms, an array of characters. A string is generally not a single object, but rather an array of characters that make a whole.
+String is a “string of characters” or in programming terms, an array of characters. A string is generally not a single object, but rather an array of characters that make up the text.
 
 #### Escape character
 
