@@ -118,7 +118,7 @@ Shin lang supports Strings, Integers, Flloats and Boolean as data.
 
 ### Strings
 
-String is a “string of characters” or in programming terms, an array of characters. A string is generally not a single object, but rather an array of characters that make a whole.
+String is a “string of characters” or in programming terms, an array of characters. A string is generally not a single object, but rather an array of characters that make up the text.
 
 #### Escape character
 
