@@ -4,12 +4,11 @@
 
 import shin
 import time
-from colorama import Fore, Style                        
-print("Shin Lang v0.2 | Author: Shinero")
+                      print("Shin Lang v0.2 | Author: Shinero")
 
 try:
     while True:
-        text = input(Fore.GREEN + 'shin' + Fore.RED  + ' >>> ' + Style.RESET_ALL)
+        text = input("shin >>>")
         if text.strip() == "": continue
         result, error = shin.run('<stdin>', text)
         if error:
