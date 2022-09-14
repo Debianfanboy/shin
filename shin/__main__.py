@@ -4,7 +4,7 @@
 
 import shin
 import time
-                      print("Shin Lang v0.2 | Author: Shinero")
+print("Shin Lang v0.2 | Author: Shinero")
 
 try:
     while True:
